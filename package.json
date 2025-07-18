@@ -1,0 +1,12 @@
+{
+  "name": "natto-core",
+  "version": "1.0.0",
+  "description": "The core of AI management system",
+  "license": "ISC",
+  "author": "Knilios",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
