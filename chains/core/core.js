@@ -48,7 +48,6 @@ class CoreChain extends BaseChain {
      * @returns {string}
      */
     async handle(request) {
-        super.handle(request);
         const response = await this.generativeService.generate(this.#generateRequest(request));
         // Add the response to the cached conversation
         this.cachedConversation.push({
@@ -59,7 +58,7 @@ class CoreChain extends BaseChain {
         if (this.cachedConversation.length >= SUMMARIZE_MAX_CONVERSATION_LENGTH) {
             this.#sumarize();
         }
-        return response;
+        super.handle(request);
     }
 
     /**
